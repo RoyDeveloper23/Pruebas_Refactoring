@@ -54,6 +54,6 @@ public class DemoMain {
         System.out.println(compra);
 
         System.out.println("\nReprogramacion:");
-        sistema.reprogramar(f1, f1.getFechaHora().plusDays(1));
+        f1.cambiarFecha(f1.getFechaHora().plusDays(1));
     }
 }

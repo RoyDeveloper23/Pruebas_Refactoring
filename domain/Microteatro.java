@@ -6,7 +6,7 @@ public class Microteatro extends Espectaculo {
     }
 
     @Override
-    public String getTipo() {
-        return "Microteatro";
+    public TipoEspectaculo getTipo() {
+        return TipoEspectaculo.MICROTEATRO;
     }
 }

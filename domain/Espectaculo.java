@@ -26,6 +26,6 @@ public abstract class Espectaculo {
         funciones.add(Objects.requireNonNull(funcion));
     }
 
-    public abstract String getTipo();
+    public abstract TipoEspectaculo getTipo();
 }
 

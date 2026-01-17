@@ -26,6 +26,10 @@ public class Usuario {
         return rol;
     }
 
+    public boolean esAdministrador() {
+        return this.rol.equals(Rol.ADMINISTRADOR);
+    }
+
     @Override
     public String toString() {
         return nombre + " (" + rol + ")";

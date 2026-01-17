@@ -30,4 +30,9 @@ public class EventoFuncion {
     public LocalDateTime getFechaHora() {
         return fechaHora;
     }
+
+    public String obtenerResumenLog() {
+        return String.format("[%s] %s - %s (%s)", 
+            fechaHora, tipo.toUpperCase(), mensaje, nombreEspectaculo);
+    }
 }

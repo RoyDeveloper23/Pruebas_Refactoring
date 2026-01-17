@@ -1,6 +1,7 @@
 package domain;
 
 import common.EstadoAsiento;
+import common.MensajesError;
 import common.Seccion;
 import java.time.Instant;
 
@@ -60,7 +61,7 @@ public class Asiento {
 
     public void reservarHasta(Instant hasta) {
         if (estado == EstadoAsiento.AGOTADO) {
-            throw new IllegalStateException("El asiento ya esta agotado");
+            throw new IllegalStateException(MensajesError.ASIENTO_AGOTADO);
         }
         estado = EstadoAsiento.RESERVADO;
         reservadoHasta = hasta;
@@ -75,7 +76,7 @@ public class Asiento {
 
     public void confirmarCompra() {
         if (estado == EstadoAsiento.AGOTADO) {
-            throw new IllegalStateException("El asiento ya esta agotado");
+            throw new IllegalStateException(MensajesError.ASIENTO_AGOTADO);
         }
         estado = EstadoAsiento.AGOTADO;
         reservadoHasta = null;
