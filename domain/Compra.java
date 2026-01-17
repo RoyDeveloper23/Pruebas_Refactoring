@@ -12,10 +12,10 @@ public class Compra {
     private final LocalDateTime fechaHora;
     private final List<Asiento> asientos;
 
-    public Compra(Usuario usuario, String nombreEspectaculo, LocalDateTime fechaHora, List<Asiento> asientos) {
+    public Compra(Usuario usuario, DatosFuncion datosFuncion, List<Asiento> asientos) {
         this.usuario = Objects.requireNonNull(usuario);
-        this.nombreEspectaculo = Objects.requireNonNull(nombreEspectaculo);
-        this.fechaHora = Objects.requireNonNull(fechaHora);
+        this.nombreEspectaculo = Objects.requireNonNull(datosFuncion.nombre());
+        this.fechaHora = Objects.requireNonNull(datosFuncion.fecha());
         this.asientos = new ArrayList<>(Objects.requireNonNull(asientos));
     }
 

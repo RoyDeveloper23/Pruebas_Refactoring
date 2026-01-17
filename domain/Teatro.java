@@ -6,7 +6,7 @@ public class Teatro extends Espectaculo {
     }
 
     @Override
-    public String getTipo() {
-        return "Teatro";
+    public TipoEspectaculo getTipo() {
+        return TipoEspectaculo.TEATRO;
     }
 }

@@ -6,7 +6,7 @@ public class StandUp extends Espectaculo {
     }
 
     @Override
-    public String getTipo() {
-        return "StandUp";
+    public TipoEspectaculo getTipo() {
+        return TipoEspectaculo.STAND_UP;
     }
 }

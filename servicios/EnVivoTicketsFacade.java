@@ -69,11 +69,6 @@ public class EnVivoTicketsFacade {
         return funcion.confirmarCompra(usuario, codigosAsiento);
     }
 
-    public void reprogramar(Funcion funcion, LocalDateTime nuevaFechaHora) {
-        Objects.requireNonNull(funcion);
-        funcion.cambiarFecha(nuevaFechaHora);
-    }
-
     private Espectaculo buscarEspectaculo(String nombre) {
         if (nombre == null) {
             throw new IllegalArgumentException("El nombre del espectaculo no puede ser nulo");

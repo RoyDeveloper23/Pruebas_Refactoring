@@ -1,12 +1,13 @@
 package servicios;
 
 import common.EventoFuncion;
+import domain.ServicioNotificacion;
 import ports.ObservadorFuncion;
 import ports.SujetoFuncion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CentroNotificacionesFuncion implements SujetoFuncion {
+public class CentroNotificacionesFuncion implements SujetoFuncion, ServicioNotificacion {
     private final List<ObservadorFuncion> observadores;
 
     public CentroNotificacionesFuncion() {
